@@ -1,0 +1,65 @@
+.mainContainer{
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    margin-top: -4rem;
+}
+
+.backdropContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.backdropContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gradient{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8379726890756303) 5%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    z-index: 2;
+}
+
+.descriptionContainer{
+    max-width: 500px;
+    min-width: 250px;
+    position: absolute;
+    color: var(--text-primary-color);
+    margin: 110px 0 0 5%;
+    z-index: 3;
+}
+
+.descriptionContainer h1{
+    margin-bottom: 1rem;
+}
+
+.descriptionContainer p{
+    margin-bottom: 1rem;
+}
+
+.descriptionContainer button{
+    font-size: 19px;
+    padding: 8px 20px;
+    color: #000;
+    background-color: #d1d5db;
+    border-width: 1px;
+    border-color: #d1d5db;
+}
+
+
+@media (max-width: 500px){
+    .mainContainer{
+        height: 500px;
+    }
+    .gradient{
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0.65) 100%, rgba(255,255,255,0) 90%);
+    }
+}

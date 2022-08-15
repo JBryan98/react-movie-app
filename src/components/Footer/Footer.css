@@ -1,0 +1,15 @@
+.footerContainer{
+    height:100px;
+    background-color:#19023d;
+    color: #fff;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerContainer span{
+    color: #fef08a;
+}

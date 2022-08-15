@@ -1,0 +1,87 @@
+.resultado{
+    text-align: center;
+    color: var(--text-primary-color);
+    margin-bottom: 2rem;
+}
+
+.resultado span{
+    color: var(--main-color);
+}
+  .itemLink{
+    text-decoration: none;
+    color: var(--text-primary-color);
+  }
+
+  .itemContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 40px;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .items{
+    width: 230px;
+    height: 345px;
+    display: flex;
+    border-radius: 1rem;
+    position: relative;
+  }
+  
+  .itemPoster{
+    width: 230px;
+    height: 345px;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .itemPoster img{
+    display: block;
+    width: 230px;
+    height: 345px;
+  }
+  
+  .itemDescription{
+    width: 230px;
+    height: 345px;
+    position: absolute;
+    padding: 12px;
+    border-radius: 1rem;
+    opacity: 0;
+  }
+  
+  .itemDescription:hover{
+    opacity: 1;
+    background-color: #000;
+    transform: scale(1.01);
+  }
+
+  .itemInfo h4{
+    margin-bottom: 8px;
+  }
+  
+  .itemOverview{
+    color: #bfc1c3;
+    font-size: 14px;
+    margin-top: 1rem;
+  }
+  
+  .itemRate{
+    color: #ffbf47;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+  }
+  
+  .notFound{
+    margin-top: 10rem;
+  }
+
+  .notFound h1{
+    color: red;
+  }
+

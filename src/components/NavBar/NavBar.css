@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+header{
+    width: var(--container-width);
+    margin: auto;
+    height: 4rem;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.barIcon{
+    font-size: 25px;
+    color: var(--text-primary-color);
+    margin-left: 5%;
+    display: none;
+}
+
+.barIcon:hover{
+    color: var(--hover-color);
+}
+
+.linkContainer{
+    display: flex;
+    color: var(--text-primary-color);
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+#hidden{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin: 0 40px 0 0;
+}
+
+.navLink{
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-size: 23px;
+    font-weight: 500;
+    padding-bottom: 14px;
+  }
+
+  .navLink:hover{
+    color: var(--hover-color);
+    border-bottom: 3px solid var(--hover-color);
+  }
+
+  .active{
+    color: var(--hover-color);
+  }
+
+  .searchForm{
+    position: absolute;
+    right: 0;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer{
+    display: flex;
+}
+
+.searchInput{
+    width: 250px;
+    height: 2rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 5px;
+}
+
+.searchInput:focus{
+    background-color: #fefce8;
+    font-weight: bolder;
+    outline: none;
+}
+
+.searchIcon{
+    position: absolute;
+    right: 6px;
+    color: black;
+    font-size: 1.5rem;
+    height: 2rem;
+    padding-top: 5px;
+}
+
+.searchButton{
+    position: absolute;
+    right: 0px;
+    height: 32px;
+    width: 30px;
+    border: none;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: var(--main-color);
+}
+
+.searchButton:hover{
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 800px) {
+    header{
+        width: 100%;
+    }
+
+    .searchForm{
+        right: 10px;
+    }
+
+    .linkContainer{
+        display: none;
+    }
+
+    .responsive{
+        background-color: #000;
+    }
+    
+    #hidden{
+        position: absolute;
+        top: 60px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000;
+    }
+    #hidden li{
+        margin: 20px 0 30px;
+    }
+    .barIcon{
+        display: flex;
+    }
+}

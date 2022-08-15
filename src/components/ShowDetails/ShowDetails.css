@@ -1,0 +1,227 @@
+.showDetailsContainer{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    position: relative;
+    margin-top: -4rem;
+    overflow: hidden;
+}
+
+.showBackdrop{
+    position: absolute;
+    width: 95%;
+    right: 0;
+    overflow: hidden;
+}
+
+.showBackdrop img{
+    height: 1000px;
+    width: 100%;
+    object-fit: cover;
+    transform: translateY(-100px);
+}
+
+.showGradient{
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 90% ), linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 75% ) ;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.showInfoContainer{
+    position: absolute;
+    height: 100%;
+    width:95%;
+    display: flex;
+    align-items: center;
+    right: 0;
+    color: var(--text-primary-color);
+}
+
+.showInfoContainer .showPoster{
+    min-width: 300px;
+    height: 445px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.showPoster img{
+    width: 300px;
+    height: 445px;
+    display: block;
+    border-radius: 1rem;
+}
+
+.showInfoContainer .showDetails{
+    max-width: 1300px;
+    padding: 0 2rem;
+    height: 445px;
+}
+
+.showInfoContainer .showDetails h2{
+    margin-bottom: 1rem;
+}
+
+.showInfoContainer .showDetails h4{
+    margin-bottom: 1rem;
+}
+
+.showInfoContainer .showDetails p{
+    color: var(--text-secondary-color);
+}
+
+.showInfoContainer .showDetails strong{
+    color:  var(--text-primary-color);
+}
+
+.showInfoContainer .showDetails .externalLink{
+    color: var(--hover-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.showInfoContainer .showDetails .externalLink .externalIcon{
+    position: absolute;
+    top: 3px;
+    right: -18px;
+    font-size: 15px;
+}
+
+.showCastContainer{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.showCastContainer h2{
+    color: var(--text-primary-color);
+    margin: 1rem 0;
+}
+
+.showCastContainer .castRow{
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 2rem;
+    color: #fafafa;
+    text-align: center;
+}
+
+.showCastContainer .castRow .profileBox{
+    width: 200px;
+    margin: 0 1rem 2rem 0;
+}
+
+.showCastContainer .castRow .profileBox img{
+    width: 200px;
+    height: 300px;
+}
+
+.showVideoContainer{
+    width: 90%;
+    margin: auto;
+}
+
+.showVideoContainer h2{
+    color: var(--text-primary-color);
+    margin: 1rem 0;
+}
+
+.showVideoContainer .videoSection{
+    display: flex;
+    overflow-x: scroll;
+    color: var(--text-primary-color);
+}
+
+.showVideoContainer .videoSection .videoRow{
+    margin: 0 1rem 1rem 0;
+}
+
+.showVideoContainer .videoSection .videoRow .videoName{
+    color: var(--text-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+}
+
+.showVideoContainer .videoSection .videoRow .videoName h4{
+    text-align: center;
+    margin: 0;
+}
+
+
+@media (max-width: 1300px) {
+    .showBackdrop{
+        position: absolute;
+        width: 90%;
+        right: 0;
+    }
+    
+    
+    .showBackdrop img{
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 850px){
+    .showDetailsContainer{
+        width: 100%;
+        height: 900px;
+        overflow: hidden;
+    }
+
+    .showBackdrop{
+        width: 100%;
+        height: 900px;
+    }
+
+    .showBackdrop img{
+        height: 900px;
+    }
+
+    .showInfoContainer{
+        height: 900px;
+        position: absolute;
+        width:100%;
+    }
+
+    .showInfoContainer .showDetails{
+        margin-top: -190px;
+    }
+
+    .showInfoContainer .showPoster{
+        margin-top: -190px;
+        margin-left: 1rem;
+    }
+}   
+
+@media (max-width: 650px){
+    .showInfoContainer .showPoster{
+        display: none;
+    }
+    
+    .showPoster img{
+        display: hidden;
+    }
+}
+
+@media  (max-width: 400px){
+    .showInfoContainer .showDetails{
+        margin-top: -240px;
+    }
+
+    .showVideoContainer .videoSection .videoRow{
+        width: 330px;
+    }
+
+    .showVideoContainer .videoSection .videoRow .videoName{
+        width: 330px;
+    }
+
+    iframe{
+        width: 330px;
+        height: 300px;
+    }
+}

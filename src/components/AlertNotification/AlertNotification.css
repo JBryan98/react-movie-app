@@ -1,0 +1,7 @@
+.errorNotification{
+    width: 345px;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 1000;
+}

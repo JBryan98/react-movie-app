@@ -1,0 +1,66 @@
+.gridContainer{
+    width: var(--container-width);
+    margin: 1rem auto 0;
+    color: var(--text-primary-color);
+}
+
+.gridContainer h1{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 245px);
+    gap: 40px;
+    justify-content: center;
+}
+
+.gridLink{
+    color: var(--text-primary-color);
+}
+.gridElement{
+    display: flex;
+    position: relative;
+    border-radius: 1rem;
+}
+.itemPoster img{
+    width: 100%;
+    height: 362.59px;
+    border-radius: 1rem;
+}
+
+.itemDescription{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.itemDescription:hover{
+    background-color: black;
+    opacity: 1;
+    transform: scale(1.001);
+}
+
+.itemDescription h4{
+    color: var(--hover-color);
+    margin-bottom: 8px;
+}
+
+.itemDescription h5{
+    margin-bottom: 1rem;
+}
+
+.itemDescription .overview{
+    color: #bfc1c3;
+}
+
+.itemDescription .voteAverage{
+    position: absolute;
+    color: var(--hover-color);
+    right: 8px;
+    bottom: 8px;
+}
+

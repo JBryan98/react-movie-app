@@ -1,0 +1,53 @@
+.error-container{
+    color: var(--text-primary-color);
+    width: 90%;
+    height: 500px;
+    margin:  4rem auto 0px ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.error-content{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.error-content h1{
+    margin-bottom: 1rem;
+}
+
+.error-content span{
+    color: var(--main-color);
+}
+
+.error-content button{
+    border-style: none;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 10px;
+    background-color:var(--main-color) ;
+    width: 390px;
+}
+
+.error-content button:hover{
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 400px) and (max-height: 650px){
+    .error-container{
+        margin-top: -5rem;
+    }
+    .error-content img{
+        width: 300px;
+    }
+
+    .error-content button{
+        width: 300px;
+    }
+}
+
