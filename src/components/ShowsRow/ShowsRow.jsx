@@ -16,7 +16,7 @@ const ShowsRow = ({ title, request }) => {
       .catch((error) => console.log(error));
   }, [request]);
 
-  //console.log(show);
+  console.log(show);
   return (
     <section>
       <h1>{title}</h1>

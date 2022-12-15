@@ -26,7 +26,7 @@ const Searched = () => {
       .catch((error) => console.log(error));
   }, [input]);
 
-  //console.log(searched);
+  console.log(searched);
 
   return (
     <>

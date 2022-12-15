@@ -186,7 +186,7 @@ const ShowDetails = ({ showType }) => {
                       <img
                         src={
                           actor.profile_path == null
-                            ? "https://verenlatino.xyz/actors/uprofile.jpg"
+                            ? "https://talents2kin.com/wp-content/uploads/inconnu.jpg"
                             : `https://image.tmdb.org/t/p/w200/${actor.profile_path}`
                         }
                         alt=""

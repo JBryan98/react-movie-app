@@ -44,7 +44,7 @@ const NavBar = () => {
               <NavLink
                 className="navLink"
                 to="/"
-                onClick={() => setShowLinks(false)}
+                onClick={() => {setShowLinks(false); setAlert({state:false, severity:"", message: ""})}}
               >
                 Home
               </NavLink>
@@ -52,8 +52,8 @@ const NavBar = () => {
             <li>
               <NavLink
                 className="navLink"
-                to="/peliculas"
-                onClick={() => setShowLinks(false)}
+                to="/peliculas/page/1"
+                onClick={() => {setShowLinks(false); setAlert({state:false, severity:"", message: ""})}}
               >
                 Películas
               </NavLink>
@@ -61,8 +61,8 @@ const NavBar = () => {
             <li>
               <NavLink
                 className="navLink"
-                to="/series"
-                onClick={() => setShowLinks(false)}
+                to="/series/page/1"
+                onClick={() => {setShowLinks(false); setAlert({state:false, severity:"", message: ""})}}
               >
                 Series
               </NavLink>

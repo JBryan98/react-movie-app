@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BsStarFill } from "react-icons/bs";
 import "./ShowGrid.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import { useRef } from "react";
 
 const ShowGrid = ({ type, title }) => {
+  const { page } = useParams();
   const [show, setShow] = useState([]);
+  const paginate = useRef(null);
+
+  console.log(paginate);
   const truncateString = (string, size) => {
     if (string.length > size) {
       return string.slice(0, size) + "...";
@@ -13,16 +19,32 @@ const ShowGrid = ({ type, title }) => {
       return string;
     }
   };
+
+  const navigate = useNavigate();
+
+  if (page > 500 || isNaN(page)) {
+    navigate("/*");
+  }
+
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/${type}/popular?api_key=${process.env.REACT_APP_API_KEY}&language=es-MX&page=1`
+        `https://api.themoviedb.org/3/${type}/popular?api_key=${process.env.REACT_APP_API_KEY}&language=es-MX&page=${page}`
       )
       .then((response) => setShow(response.data.results))
       .catch((error) => console.log(error));
-  }, [type]);
+  }, [page, type]);
 
-  //console.log(show);
+  const changePage = ({ selected }) => {
+    let currentPage = selected + 1;
+    navigate(
+      show[0].title
+        ? "/peliculas/page/" + currentPage
+        : "/series/page/" + currentPage
+    );
+  };
+
+  console.log(show);
 
   return (
     <div className="gridContainer">
@@ -37,7 +59,11 @@ const ShowGrid = ({ type, title }) => {
             <div className="gridElement">
               <div className="itemPoster">
                 <img
-                  src={`https://www.themoviedb.org/t/p/w300/${show.poster_path}`}
+                  src={
+                    show.poster_path === null
+                      ? "https://bicentenario.gob.pe/biblioteca/themes/biblioteca/assets/images/not-available-es.png"
+                      : `https://www.themoviedb.org/t/p/w300/${show.poster_path}`
+                  }
                   alt={show.title ? show.title : show.name}
                 />
               </div>
@@ -56,6 +82,17 @@ const ShowGrid = ({ type, title }) => {
           </Link>
         ))}
       </div>
+      <ReactPaginate
+        previousLabel={"< Anterior"}
+        nextLabel={"Siguiente >"}
+        pageCount={500}
+        onPageChange={changePage}
+        containerClassName={"paginationSection"}
+        previousLinkClassName={"previousBtn"}
+        nextLinkClassName={"nextBtn"}
+        activeClassName={"paginationActive"}
+        ref={paginate}
+      />
     </div>
   );
 };
