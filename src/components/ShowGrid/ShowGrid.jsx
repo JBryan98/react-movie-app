@@ -4,14 +4,12 @@ import { BsStarFill } from "react-icons/bs";
 import "./ShowGrid.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-import { useRef } from "react";
 
 const ShowGrid = ({ type, title }) => {
   const { page } = useParams();
   const [show, setShow] = useState([]);
-  const paginate = useRef(null);
 
-  console.log(paginate);
+
   const truncateString = (string, size) => {
     if (string.length > size) {
       return string.slice(0, size) + "...";
@@ -91,7 +89,7 @@ const ShowGrid = ({ type, title }) => {
         previousLinkClassName={"previousBtn"}
         nextLinkClassName={"nextBtn"}
         activeClassName={"paginationActive"}
-        ref={paginate}
+        forcePage={Number(page - 1)}
       />
     </div>
   );

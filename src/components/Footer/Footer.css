@@ -10,6 +10,15 @@
     bottom: 0;
 }
 
+.footerContainer a{
+    text-decoration: none;
+}
+
+
 .footerContainer span{
     color: #fef08a;
+}
+
+.footerContainer span:hover{
+    color: var(--hover-color);
 }
