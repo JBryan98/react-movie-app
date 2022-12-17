@@ -25,7 +25,7 @@ const NavBar = () => {
         message: "¡No hay nada que buscar!",
       });
     } else {
-      navigate("/buscar/" + input);
+      navigate("/buscar/" + input +"/page/1");
       setInput("")
       setShowLinks(false);
     }

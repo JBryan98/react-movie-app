@@ -3,12 +3,11 @@ import axios from "axios";
 import { BsStarFill } from "react-icons/bs";
 import "./ShowGrid.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import ReactPaginate from "react-paginate";
+import Pagination from '../Pagination/Pagination'
 
 const ShowGrid = ({ type, title }) => {
   const { page } = useParams();
   const [show, setShow] = useState([]);
-
 
   const truncateString = (string, size) => {
     if (string.length > size) {
@@ -80,15 +79,9 @@ const ShowGrid = ({ type, title }) => {
           </Link>
         ))}
       </div>
-      <ReactPaginate
-        previousLabel={"< Anterior"}
-        nextLabel={"Siguiente >"}
+      <Pagination
         pageCount={500}
-        onPageChange={changePage}
-        containerClassName={"paginationSection"}
-        previousLinkClassName={"previousBtn"}
-        nextLinkClassName={"nextBtn"}
-        activeClassName={"paginationActive"}
+        changePage={changePage}
         forcePage={Number(page - 1)}
       />
     </div>

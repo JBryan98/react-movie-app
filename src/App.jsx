@@ -27,7 +27,7 @@ const App = () => {
               ></Route>
               <Route path="/series/page/:page" element={<Series />}></Route>
               <Route path="/series/:showId" element={<SeriesDetails />}></Route>
-              <Route path="/buscar/:input" element={<Search />}></Route>
+              <Route path="/buscar/:input/page/:page" element={<Search />}></Route>
               <Route path="/*" element={<Error />}></Route>
             </Routes>
             <Footer />

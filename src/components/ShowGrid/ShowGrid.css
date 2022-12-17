@@ -64,30 +64,4 @@
     bottom: 8px;
 }
 
-.paginationSection{
-    margin: 3rem auto 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-.paginationSection a{
-    border: 1px solid var(--main-color);
-    padding: 10px;
-    height: 41px;
-}
-
-.paginationSection li{
-    margin: 5px;
-}
-
-.paginationSection a:hover{
-    background-color: var(--hover-color);
-    cursor: pointer;
-    color: #fff;
-}
-
-.paginationActive a{
-    background-color: var(--hover-color);
-    color: #fff;
-}
 
